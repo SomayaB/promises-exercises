@@ -30,9 +30,9 @@ Promises provide a simpler alternative for executing, composing, and managing as
 ## Specifications
 
 ### Day 1 & 2
-- [ ] Complete the [Promises Course][promises-course] on Udacity
-- [ ] Read [this](https://coligo.io/javascript-promises-plain-simple/) blog post
-- [ ] Read [this](https://scotch.io/tutorials/javascript-promises-for-dummies) blog post
+- [-] Complete the [Promises Course][promises-course] on Udacity // Completed 17/21
+- [x] Read [this](https://coligo.io/javascript-promises-plain-simple/) blog post
+- [x] Read [this](https://scotch.io/tutorials/javascript-promises-for-dummies) blog post
 
 ### Day 3 & 4
 - [ ] Exercises 1-13 in the [promise-it-wont-hurt-solutions][promise-it-wont-hurt-solutions] are complete and written to the appropriate file:
