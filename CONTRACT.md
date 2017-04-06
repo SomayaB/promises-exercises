@@ -35,7 +35,7 @@ Promises provide a simpler alternative for executing, composing, and managing as
 - [x] Read [this](https://scotch.io/tutorials/javascript-promises-for-dummies) blog post
 
 ### Day 3 & 4
-- [ ] Exercises 1-13 in the [promise-it-wont-hurt-solutions][promise-it-wont-hurt-solutions] are complete and written to the appropriate file:
+- [x] Exercises 1-13 in the [promise-it-wont-hurt-solutions][promise-it-wont-hurt-solutions] are complete and written to the appropriate file:
   - [x] `src/01-warmup.js`
   - [x] `src/02-fullfill-a-promise.js`
   - [x] `src/03-reject-a-promise.js`
@@ -45,10 +45,10 @@ Promises provide a simpler alternative for executing, composing, and managing as
   - [x] `src/07-promise-after-promise.js`
   - [x] `src/08-values-and-promises.js`
   - [x] `src/09-throw-an-error.js`
-  - [ ] `src/10-an-important-file.js`
-  - [ ] `src/11-multiple-promises.js`
-  - [ ] `src/12-fetch-json.js`
-  - [ ] `src/13-do-some-work.js`
+  - [x] `src/10-an-important-file.js`
+  - [x] `src/11-multiple-promises.js`
+  - [x] `src/12-fetch-json.js`
+  - [x] `src/13-do-some-work.js`
 
 ### Day 5
 - [ ] Look at the [documentation](https://github.com/vitaly-t/pg-promise/wiki/Learn-by-Example) of the `pg-promise` repository
