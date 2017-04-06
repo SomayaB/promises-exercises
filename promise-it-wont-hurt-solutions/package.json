@@ -1,0 +1,22 @@
+{
+  "name": "promises-exercises",
+  "version": "1.0.0",
+  "description": "Bundle of promises exercises",
+  "main": "promise-it-wont-hurt-solutions/src/01-warmup.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SomayaB/promises-exercises.git"
+  },
+  "author": "SomayaB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SomayaB/promises-exercises/issues"
+  },
+  "homepage": "https://github.com/SomayaB/promises-exercises#readme",
+  "dependencies": {
+    "es6-promise": "^4.1.0"
+  }
+}
