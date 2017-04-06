@@ -50,5 +50,3 @@ Run this command in a terminal window
 ```bash
 promise-it-wont-hurt verify src/01-warmup.js
 ```
-
-
