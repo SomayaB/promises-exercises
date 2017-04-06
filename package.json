@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SomayaB/promises-exercises#readme",
   "dependencies": {
-    "es6-promise": "^4.1.0"
+    "es6-promise": "^4.1.0",
+    "pg-promise": "^4.2.0"
   }
 }
