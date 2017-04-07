@@ -1,3 +1,7 @@
+#lamentable-bulbul
+Somaya Bounouar
+http://jsdev.learnersguild.org/goals/186-Promises_Applied.html
+
 # Promises Exercises
 
 Base repository for the [promises-applied](https://github.com/GuildCrafts/web-development-js/issues/186) goal.
