@@ -30,7 +30,7 @@ Promises provide a simpler alternative for executing, composing, and managing as
 ## Specifications
 
 ### Day 1 & 2
-- [-] Complete the [Promises Course][promises-course] on Udacity // Completed 17/21
+- [x] Complete the [Promises Course][promises-course] on Udacity
 - [x] Read [this](https://coligo.io/javascript-promises-plain-simple/) blog post
 - [x] Read [this](https://scotch.io/tutorials/javascript-promises-for-dummies) blog post
 
@@ -62,7 +62,7 @@ Promises provide a simpler alternative for executing, composing, and managing as
   - [x] Exercise 7
 
 ### Stretch
-- [ ] Read Google's [Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/promises) to Promises
+- [x] Read Google's [Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/promises) to Promises
 
 ## Quality Rubric
 **Well formatted code**

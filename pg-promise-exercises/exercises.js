@@ -7,10 +7,10 @@ const postgresConfig = {
   database: 'pg-promise-exercises',
   user: 'Somaya', // replace this with your username
   password: '' //  replace this if you have set a password for your username (this is unlikely)
-};
+}
 
 
-const db = pg(postgresConfig);
+const db = pg(postgresConfig)
 
 /* -----------------------------------------
    Exercise 1
@@ -26,15 +26,14 @@ const db = pg(postgresConfig);
 */
 
 
-
 const allBooks = db.any('SELECT * FROM books')
 /* This is calling the `then` function on the `allBooks` promise, and checks if
    we get back 15 rows. This assertion will fail. Make it PASS!*/
 allBooks.then(books => {
   assert.deepEqual(books.length, 15)
 }).catch(error => {
-  console.log('Dang, my assertion failed.', error);
-});
+  console.log('Dang, my assertion failed.', error)
+})
 
 /* --------End of Exercise 1---------------- */
 
@@ -55,12 +54,12 @@ allBooks.then(books => {
 //
 // */
 
-let firstTenBooks = db.any('SELECT title FROM books LIMIT 10'); // = .... IMPLEMENT THIS FUNCTION
+let firstTenBooks = db.any('SELECT title FROM books LIMIT 10') // = .... IMPLEMENT THIS FUNCTION
 firstTenBooks.then(books => {
   assert(books.length, 10)
 }).catch(error => {
-  console.log('Whoops, my function doesnt behave as expected.', error);
-});
+  console.log('Whoops, my function doesnt behave as expected.', error)
+})
 
 /* --------End of Exercise 2---------------- */
 
@@ -83,14 +82,14 @@ firstTenBooks.then(books => {
 //
 // */
 //
-let findAuthorsOrderedByLastName = db.any('SELECT * FROM authors ORDER BY last_name'); // = .... IMPLEMENT THIS FUNCTION
+let findAuthorsOrderedByLastName = db.any('SELECT * FROM authors ORDER BY last_name') // = .... IMPLEMENT THIS FUNCTION
 findAuthorsOrderedByLastName.then(authors => {
   assert.deepEqual(authors.length, 19)
   assert.deepEqual(authors[0].last_name, 'Alcott')
   assert.deepEqual(authors[18].last_name, 'Worsley')
 }).catch(error => {
-  console.log('Whoops, my function doesnt behave as expected.', error);
-});
+  console.log('Whoops, my function doesnt behave as expected.', error)
+})
 //
 // /* --------End of Exercise 3---------------- */
 //
@@ -129,15 +128,15 @@ findAuthorsOrderedByLastName.then(authors => {
 //    {first_name: 'Theodor Seuss', last_name: 'Geisel', title: 'The Cat in the Hat'}]
 // */
 let findBookAuthors = db.any(`SELECT first_name, last_name, title FROM authors
-  JOIN books ON authors.id = books.author_id`); // IMPLEMENT THIS FUNCTION
+  JOIN books ON authors.id = books.author_id`) // IMPLEMENT THIS FUNCTION
 
 findBookAuthors.then(table => {
   assert.deepEqual(table[0], {first_name: 'John', last_name: 'Worsley', title: 'Practical PostgreSQL'})
   assert.deepEqual(table[4], {first_name: 'Stephen', last_name: 'King', title: 'The Shining'})
   assert.deepEqual(table[8], {first_name: 'Edgar Allen', last_name: 'Poe', title: 'The Tell-Tale Heart'})
 }).catch(error => {
-  console.log('Whoops, my function doesnt behave as expected.', error);
-});
+  console.log('Whoops, my function doesnt behave as expected.', error)
+})
 // /* --------End of Exercise 4---------------- */
 //
 //
@@ -164,9 +163,6 @@ findBookAuthors.then(table => {
 //
 //
 // */
-// let authorIdWithTwoBooks; // IMPLEMENT THIS FUNCTION
-//
-// /* --------End of Exercise 5---------------- */
 let authorIdWithTwoBooks = db.any(`SELECT author_id FROM books
   GROUP BY author_id
   HAVING(COUNT(author_id) > 1)`)
@@ -178,6 +174,8 @@ authorIdWithTwoBooks.then((table) => {
 }).catch(error => {
   console.log('Whoops, my function doesnt behave as expected.', error)
 })
+// /* --------End of Exercise 5---------------- */
+
 
 
 // /* -----------------------------------------
@@ -205,7 +203,7 @@ authorIdWithTwoBooks.then((table) => {
 let bookTitlesWithMultipleEditions = db.any(`SELECT title FROM books
   JOIN editions ON books.id = editions.book_id
   GROUP BY title
-  HAVING(COUNT(title) > 1)`); // IMPLEMENT THIS FUNCTION
+  HAVING(COUNT(title) > 1)`) // IMPLEMENT THIS FUNCTION
 
 bookTitlesWithMultipleEditions.then(table => {
   assert.deepEqual(table.length, 5)
@@ -244,7 +242,7 @@ let findStockedBooks = db.any(`SELECT DISTINCT books.title, authors.first_name, 
 JOIN authors ON books.author_id = authors.id
 JOIN editions ON books.id = editions.book_id
 JOIN daily_inventory ON editions.isbn = daily_inventory.isbn
-WHERE daily_inventory.is_stocked = true`); // IMPLEMENT THIS FUNCTION
+WHERE daily_inventory.is_stocked = true`) // IMPLEMENT THIS FUNCTION
 
 findStockedBooks.then(table => {
   assert.deepEqual(table.length, 2)
@@ -252,12 +250,12 @@ findStockedBooks.then(table => {
   assert.deepEqual(table[1], {title: 'The Cat in the Hat', first_name: 'Theodor Seuss', last_name:'Geisel'})
   }).catch(error => {
     console.log('Whoops, my function doesnt behave as expected.', error)
-    })
+  })
 
 // /* --------End of Exercise 7---------------- */
 //
 //
 //
 //
-console.log('Reached the end!');
-pg.end();
+console.log('Reached the end!')
+pg.end()

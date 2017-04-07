@@ -21,11 +21,11 @@ require('es6-promise');
 //     // Your solution here
 
 let promise = new Promise((resolve, reject) => {
-	setTimeout(function(){
+	setTimeout(() => {
 		resolve('FULFILLED!')
-	}, 300);
-});
+	}, 300)
+})
 
 promise.then((result) => {
-	console.log(result);
-});
+	console.log(result)
+})

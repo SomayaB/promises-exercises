@@ -16,9 +16,9 @@ let parsePromised = (json) => {
       resolve(JSON.parse(json))
     } catch (error) {
       reject(new Error(error))
-      }
-    })
-  }
+    }
+  })
+}
 parsePromised(process.argv[2])
   .catch((error) => {
     console.log(error.message)

@@ -29,13 +29,12 @@ require('es6-promise');
 //     // Your solution here
 
 let promise = new Promise((resolve, reject) => {
-      // Your solution here
-      setTimeout(function(){
-        reject(new Error('REJECTED!'))
-      }, 300)
+  setTimeout(function(){
+    reject(new Error('REJECTED!'))
+  }, 300)
 })
 
-function onReject (error) {
+let onReject = (error) => {
       // Your solution here
   console.log(error.message)
 }
