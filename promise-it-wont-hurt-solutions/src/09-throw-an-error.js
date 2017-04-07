@@ -13,11 +13,13 @@ require('es6-promise');
 let parsePromised = (json) => {
   return new Promise((resolve, reject) => {
     try {
-      resolve(JSON.parse)
+      resolve(JSON.parse(json))
     } catch (error) {
       reject(new Error(error))
       }
     })
   }
 parsePromised(process.argv[2])
-  .catch(console.log)
+  .catch((error) => {
+    console.log(error.message)
+  })

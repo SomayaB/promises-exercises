@@ -15,18 +15,10 @@ require('es6-promise');
 // Finally, print the fulfilled value of that new promise with console.log.
 
 
+let firstPromise = first()
 
-let first = () => {
-  let promise = new Promise((resolve,reject) => {
-  resolve("secret value")
-  })
-    return promise
-}
+let secondPromise = firstPromise.then((result) => {
+  return second(result)
+})
 
-let second = (first) => {
-  return first
-}
-
-first()
-.then(second)
-.then(console.log)
+secondPromise.then(console.log)

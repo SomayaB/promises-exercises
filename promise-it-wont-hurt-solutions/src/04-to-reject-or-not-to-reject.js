@@ -19,7 +19,7 @@ require('es6-promise');
 //
 // Lastly, pass console.log and the function you just created as the success
 // and rejection handlers respectively.
-// 
+//
 // If successful, your script should only log “I FIRED” and should not log
 // “I DID NOT FIRE”.
 //
@@ -27,8 +27,8 @@ require('es6-promise');
 // this.
 
 let promise = new Promise((resolve, reject) => {
-  resolve('I FIRED!')
-  reject(new Error('I DID NOT FIRE!'))
+  resolve('I FIRED')
+  reject(new Error('I DID NOT FIRE'))
 
 })
 
@@ -36,7 +36,4 @@ function onRejected(error) {
   console.log(error.message)
 }
 
-promise.then((result) => {
-  console.log(result)
-})
-promise.catch(onRejected)
+promise.then(console.log, onRejected)

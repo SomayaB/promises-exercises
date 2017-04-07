@@ -45,5 +45,5 @@ Promise.resolve(iterate(1))
   .then(iterate)
   .then(iterate)
   .catch((error) => {
-    console.log(error.message)
+    console.log(error)
   })

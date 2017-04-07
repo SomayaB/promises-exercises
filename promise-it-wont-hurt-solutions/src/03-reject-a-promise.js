@@ -41,4 +41,4 @@ function onReject (error) {
 }
 
     // Your solution here
-promise.catch(onReject);
+promise.then(null, onReject);
